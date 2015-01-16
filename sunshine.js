@@ -5,9 +5,8 @@
   Bonus: Use RegEx to create the array
 */
 function reverseString(str) {
-
+  return str.split('').reverse().join('');
 }
-
 /**
   Write a function that takes two parameters as input in the order
   of string, character. With the first string parameter use Array
@@ -17,9 +16,18 @@ function reverseString(str) {
   Then convert the array to a string and return it.
 */
 function spliceString(str, char) {
+ var splitArray = str.split(""); 
+  var remove = splitArray.pop();
+  var foo = splitArray.unshift(remove);
+  var boo = splitArray.splice(-1,0,char);
+  var last = splitArray.join("");
 
+  return last; 
 }
 
+/**return  str.split('').unshift((str.charAt(string.length))).slice(-1).join("");
+
+  
 /**
   Using the Array map() method write a function that takes an array
   of strings as input and returns a duplicate array with all strings
