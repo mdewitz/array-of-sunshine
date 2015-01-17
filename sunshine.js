@@ -37,4 +37,11 @@ function spliceString(str, char) {
 */
 function speakPigLatin(strArray) {
 
+  var pArray = [];
+  strArray.map(function(thisIndex){ 
+    var word = thisIndex.substr(1,thisIndex.length-1).concat(thisIndex[0]+ "ay");
+    pArray.push(word);
+  });
+  return pArray;
 }
+//var  end = splitArray.splice(-1, -1, 'ay');
